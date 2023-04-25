@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html, body {
   margin: 0;
   /* background-color: rgb(245, 243, 255); */
@@ -11,15 +12,19 @@ html, body {
 .contain {
   animation: bounce;
   animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
   animation-timing-function: ease-in-out; 
+  opacity: 100%;
 }
 
 @keyframes bounce {
   0% {
-    scale: 30%;
+    opacity: 100%;
+    scale: 0%;
   }
   40% {
-  scale: 120%;
+    scale: 120%;
   }
   60% {
     scale: 85%;
@@ -53,11 +58,10 @@ html, body {
 }
 
 @keyframes scale {
-  from {
+  0% {
     scale: 0%;
   }
-
-  to {
+  100% {
     scale: 100%;
   }
 }
@@ -72,8 +76,33 @@ html, body {
   from {
     scale: 100%;
   }
-
+  
   to {
     scale: 0%;
+  }
+}
+
+.loading {
+  @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+
+  animation: down;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-delay: 1s;
+  
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+@keyframes down {
+  from {
+    transform: translateY(0); 
+  }
+  to {
+    transform: translateY(100%);
+    display: none;
   }
 }

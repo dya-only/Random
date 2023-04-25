@@ -30,22 +30,31 @@
             }
         } else {
             arr = []
-
+            
             for (let i = 0; i < count; i++) {
                 arr.push(Math.floor(Math.random() * end) + start)
             }
-
+            
             resOpen = 'res-open fixed z-50 bg-white w-[300px] h-[200px] border-[1px] shadow-xl rounded-2xl flex flex-col justify-start items-center'
         }
-
+        
     }
 </script>
 
+<div class="loading fixed w-screen h-screen z-50 bg-blue-400 flex justify-center items-center">
+  로딩중이에요...
+</div>
+
 <img class="w-screen h-screen fixed object-cover" src={'https://9to5mac.com/?attachment_id=811090'} alt="">
+<div class="fixed m-8">
+    <div class="text-xl text-white opacity-75 font-bold z-20">드래그 & 드롭해서 창을 움직여보세요</div>
+    <div class="text-xl text-white opacity-75 font-bold z-20">닫기 버튼(<span class="text-red-400">빨간색</span>)을 클릭하여 닫을 수도 있어요</div>
+</div>
+<!-- <div class="m-8 text-xl text-white opacity-75 font-bold z-20">드래그 & 드롭해서 윈도우를 움직여보세요</div> -->
 
 { #if isOpen }
 <div class="contain w-screen h-screen flex justify-center items-center z-40">
-
+    
     { #if resOpen !== 'hidden' }
         <div use:draggable class={resOpen}>
             <div class="w-[300px] h-[40px] mb-6 flex justify-start items-end">
@@ -53,7 +62,7 @@
                 <div class="cursor-pointer font-bold text-yellow-400 mr-2">●</div>
                 <div class="cursor-pointer font-bold text-green-400">●</div>
             </div>
-
+            
             <div class="w-[280px] h-[125px] overflow-y-auto p-4 bg-slate-100 rounded-2xl flex flex-wrap justifty-start items-start">
                 { #each arr as item, idx }
                     <div class="font-bold text-red-400 text-2xl m-2">{ item }</div>
@@ -95,8 +104,6 @@
     </div>
 </div>
 { /if }
-
-<div class="w-56 h-24 backdrop-blur-2xl bg-white z-50 fixed"></div>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
