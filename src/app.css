@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  margin: 0;
+  /* background-color: rgb(245, 243, 255); */
+  overflow: hidden;
+}
+
+.contain {
+  animation: bounce;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out; 
+}
+
+@keyframes bounce {
+  0% {
+    scale: 30%;
+  }
+  40% {
+  scale: 120%;
+  }
+  60% {
+    scale: 85%;
+  }
+  70% {
+    scale: 105%;
+  }
+  80% {
+    scale: 95%;
+  }
+  90% {
+    scale: 100%;
+  }
+}
+
+.res-open {
+  animation: scale;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes scale {
+  from {
+    scale: 0%;
+  }
+
+  to {
+    scale: 100%;
+  }
+}
+
+.hidden {
+  animation: scale-down;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes scale-down {
+  from {
+    scale: 100%;
+  }
+
+  to {
+    scale: 0%;
+  }
+}
