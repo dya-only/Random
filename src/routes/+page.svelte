@@ -10,7 +10,6 @@
     let arr = [0, ]
 
     const onClickResult = () => {
-
        
         if (repeat) {
             if (count < end) {
@@ -18,7 +17,7 @@
     
                 let k = 0
                 while(k < count) {
-                    const n = Math.floor(Math.random() * end) + start
+                    let n = Math.floor(Math.random() * end) + start
                 
                     if (! arr.find((e) => (e === n))) {
                         arr.push(n)
@@ -39,7 +38,6 @@
             resOpen = 'res-open fixed z-50 bg-white w-[300px] h-[200px] border-[1px] shadow-xl rounded-2xl flex flex-col justify-start items-center'
         }
 
-        
     }
 </script>
 
@@ -74,16 +72,16 @@
         <div class="w-[300px] flex flex-col justify-center items-start mb-16">
             <div class="mb-4 text-xl text-slate-500"><span class="text-blue-500 font-bold">어디까지</span> 필요한가요?</div>
             <div class="flex justify-center items-center">
-                <input type="text" bind:value={start} class="w-24 h-12 p-4 rounded-2xl outline-none border-[0.5px] border-slate-200 transition duration-300 focus:border-blue-400" placeholder="시작" />
-                <span class="ml-4 mr-4 font-bold text-slate-500">부터</span>
-                <input type="text" bind:value={end} class="w-24 h-12 p-4 rounded-2xl outline-none border-[0.5px] border-slate-200 transition duration-300 focus:border-blue-400" placeholder="끝" />
+                <!-- <input type="text" bind:value={start} class="w-24 h-12 p-4 rounded-2xl outline-none border-[0.5px] border-slate-200 transition duration-300 focus:border-blue-400" placeholder="시작" /> -->
+                <input type="number" bind:value={end} class="w-24 h-12 p-4 rounded-2xl outline-none border-[0.5px] border-slate-200 transition duration-300 focus:border-blue-400" placeholder="끝" />
+                <span class="ml-4 mr-4 font-bold text-slate-500">까지</span>
             </div>
         </div>
     
         <div class="w-[300px] flex flex-col justify-center items-end mb-12">
             <div class="mb-4 text-xl text-slate-500"><span class="text-blue-500 font-bold">몇개를 </span>가져와야하나요?</div>
             <div class="flex justify-center items-center">
-                <input type="text" bind:value={count} class="w-24 h-12 p-4 rounded-2xl outline-none border-[0.5px] border-slate-200 transition duration-300 focus:border-blue-400" placeholder="개수" />
+                <input type="number" bind:value={count} class="w-24 h-12 p-4 rounded-2xl outline-none border-[0.5px] border-slate-200 transition duration-300 focus:border-blue-400" placeholder="개수" />
                 <span class="ml-4 font-bold text-slate-500">개</span>
             </div>
         </div>
