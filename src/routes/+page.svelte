@@ -6,23 +6,30 @@
     let start = 1
     let end = 10
     let count = 5
+    let repeat = false
     let arr = [0, ]
 
     const onClickResult = () => {
-        arr = []
 
-        let k = 0
-        while(k < count) {
-            const n = Math.floor(Math.random() * end) + start
+       
+        if (!repeat && count < end) {
+            arr = []
+
+            let k = 0
+            while(k < count) {
+                const n = Math.floor(Math.random() * end) + start
             
-            if (! arr.find((e) => (e === n))) {
-                arr.push(n)
-                k++
+                if (! arr.find((e) => (e === n))) {
+                    arr.push(n)
+                    k++
+                }
             }
+
+            console.log(arr)
+            resOpen = 'res-open fixed z-50 bg-white w-[300px] h-[200px] border-[1px] shadow-xl rounded-2xl flex flex-col justify-start items-center'
         }
 
-        console.log(arr)
-        resOpen = 'res-open fixed z-50 bg-white w-[300px] h-[200px] border-[1px] shadow-xl rounded-2xl flex flex-col justify-start items-center'
+        
     }
 </script>
 
