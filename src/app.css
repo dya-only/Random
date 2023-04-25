@@ -40,6 +40,17 @@ html, body {
   animation-duration: .5s;
   animation-timing-function: ease-out;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #d1d1d1;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  border-radius: 20px;
+}
 
 @keyframes scale {
   from {
