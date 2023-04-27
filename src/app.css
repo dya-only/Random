@@ -25,6 +25,30 @@ html, body {
   animation-timing-function: ease-in-out; 
   opacity: 100%;
 }
+.random {
+  animation: bounce;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; 
+  opacity: 100%;
+}
+
+.res-open {
+  animation: bounce;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #d1d1d1;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  border-radius: 20px;
+}
 
 @keyframes bounce {
   0% {
@@ -46,23 +70,6 @@ html, body {
   90% {
     scale: 100%;
   }
-}
-
-.res-open {
-  animation: scale;
-  animation-duration: .5s;
-  animation-timing-function: ease-out;
-}
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  background: #d1d1d1;
-  border-radius: 20px;
-}
-::-webkit-scrollbar-thumb {
-  background: #aaaaaa;
-  border-radius: 20px;
 }
 
 @keyframes scale {
