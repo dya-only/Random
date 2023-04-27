@@ -15,7 +15,7 @@ html, body {
   animation-delay: 0.5s;
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out; 
-  opacity: 100%;
+  /* opacity: 100%; */
 }
 
 .desk {
