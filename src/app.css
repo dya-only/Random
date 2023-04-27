@@ -12,7 +12,15 @@ html, body {
 .contain {
   animation: bounce;
   animation-duration: 1s;
-  animation-delay: 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; 
+  opacity: 100%;
+}
+
+.desk {
+  animation: bounce;
+  animation-duration: 1s;
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out; 
   opacity: 100%;
@@ -89,7 +97,7 @@ html, body {
   animation-duration: .5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in;
-  animation-delay: 1s;
+  animation-delay: 0.1s;
   
   color: white;
   font-size: 25px;
@@ -104,5 +112,22 @@ html, body {
   to {
     transform: translateY(100%);
     display: none;
+  }
+}
+
+.dock {
+  animation: dock-up;
+  animation-duration: .5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-out;
+  animation-delay: 2s;
+}
+
+@keyframes dock-up {
+  from {
+    transform: translateY(110%);
+  }
+  to {
+    transform: translateY(0%);
   }
 }
