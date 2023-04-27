@@ -67,7 +67,7 @@
 <div class="fixed m-8">
     <div class="text-xl text-white opacity-75 font-bold z-20">드래그 & 드롭해서 창을 움직여보세요</div>
     <div class="text-xl text-white opacity-75 font-bold z-20">닫기 버튼(<span class="text-red-400">빨간색</span>)을 클릭하여 닫을 수도 있어요</div>
-    <div class="text-lg text-blue-400 opacity-90 font-bold z-50">https://github.com/dya-only/Random</div>
+    <!-- <div class="text-lg text-blue-400 opacity-90 font-bold z-50">https://github.com/dya-only/Random</div> -->
 </div>
 
 <div class="dock-contain w-screen h-screen flex justify-center items-end fixed">
